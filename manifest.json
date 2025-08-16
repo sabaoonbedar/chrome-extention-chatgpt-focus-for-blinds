@@ -1,0 +1,40 @@
+{
+  "manifest_version": 3,
+  "name": "Semantic Navigator (WCAG/ARIA)",
+  "version": "0.2.1",
+  "description": "Navigate by headings/topics and read aloud. Optimized for blind users.",
+  "permissions": ["activeTab", "scripting", "storage", "tts", "tabs"],
+  "host_permissions": ["<all_urls>"],
+  "background": { "service_worker": "src/background.js" },
+  "side_panel": { "default_path": "src/user_interface/sidepanel.html" },
+  "action": { "default_title": "Semantic Navigator" },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["src/content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "commands": {
+    "read_current": {
+      "suggested_key": { "default": "Alt+Shift+R" },
+      "description": "Read the current region/topic"
+    },
+    "next_heading": {
+      "suggested_key": { "default": "Alt+Shift+J" },
+      "description": "Move to next heading"
+    },
+    "prev_heading": {
+      "suggested_key": { "default": "Alt+Shift+K" },
+      "description": "Move to previous heading"
+    },
+    "jump_topics": {
+      "suggested_key": { "default": "Alt+Shift+T" },
+      "description": "Cycle through detected topics"
+    },
+    "body": {
+      "suggested_key": { "default": "Alt+Shift+B" },
+      "description": "Enter/advance body mode for the current heading"
+    }
+  }
+}

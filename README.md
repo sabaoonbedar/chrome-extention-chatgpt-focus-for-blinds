@@ -1,1 +1,2 @@
 # chrome-extention-chatgpt-focus-for-blinds
+The extention is for chat gpt in which you can bring the focus to the important topics with shortcuts, with the combination of voice over or screen reader it will focus on the topics which are needed for blinds.

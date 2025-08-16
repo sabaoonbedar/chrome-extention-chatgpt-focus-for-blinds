@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Semantic Navigator</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main role="main" aria-labelledby="app-title">
+    <h1 id="app-title">Semantic Navigator</h1>
+
+    <section aria-labelledby="scope-controls">
+      <h2 id="scope-controls">Scope</h2>
+      <button id="scopeLatest">Scope to latest response</button>
+      <button id="clearScope">Clear scope</button>
+      <p id="scopeStatus" aria-live="polite">Scope: unknown</p>
+    </section>
+
+    <section aria-labelledby="read-controls">
+      <h2 id="read-controls">Read & Navigate</h2>
+      <button id="read">Read scoped response</button>
+      <div class="row">
+        <button id="prevResp">◀ Prev response</button>
+        <button id="nextResp">Next response ▶</button>
+      </div>
+      <div class="row">
+        <button id="prevHeading">▲ Prev heading</button>
+        <button id="nextHeading">▼ Next heading</button>
+      </div>
+      <p id="counts" aria-live="polite">—</p>
+    </section>
+
+    <section aria-labelledby="settings">
+      <h2 id="settings">Settings</h2>
+      <label><input type="checkbox" id="ttsToggle" /> Extension TTS (use system voice)</label>
+      <p class="hint">If your screen reader already speaks, turn this off to avoid double speech.</p>
+    </section>
+
+    <footer>
+      <p>Shortcuts: Alt+Shift+S scope • Alt+Shift+R read • Alt+Shift+H prev/next heading • Alt+Shift+C clear</p>
+    </footer>
+  </main>
+
+  <script src="sidepanel.js"></script>
+</body>
+</html>

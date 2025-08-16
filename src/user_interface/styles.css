@@ -1,0 +1,7 @@
+body { font-family: system-ui, sans-serif; line-height: 1.4; padding: 12px; }
+h1 { font-size: 1.25rem; margin: 0 0 12px; }
+h2 { font-size: 1rem; margin: 16px 0 8px; }
+button { margin: 4px 6px 4px 0; padding: 6px 10px; }
+.row { display: flex; gap: 8px; margin: 6px 0; }
+.hint { color: #555; font-size: 0.9em; }
+footer { margin-top: 16px; color: #666; font-size: 0.85em; }
