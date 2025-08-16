@@ -1,0 +1,1 @@
+# chrome-extention-chatgpt-focus-for-blinds
